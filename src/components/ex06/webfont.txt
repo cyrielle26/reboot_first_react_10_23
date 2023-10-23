@@ -1,0 +1,31 @@
+1] go to look for webfont on the internet to select a font
+https://fonts.google.com/
+search / select / click on a font 
+copy the link of the desired font
+ex: 
+noto / Noto Sans Korean /
+link <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;200;300;400;500;600;700;800;900&family=Varta:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+2] import the webfont for react part 1/
+public / index.html --
+
+paste after 
+<meta
+      name="description"
+      content="Web site created using create-react-app"
+    />
+
+past  the link
+
+3] import the webfont for react part 2/
+go to GlobalStyled file
+[
+export const GlobalStyled = createGlobalStyle`
+${reset}
+body{
+    font-family: 'Noto Sans Korean', sans-serif;
+}
+`;
+] 

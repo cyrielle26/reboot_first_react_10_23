@@ -1,0 +1,39 @@
+GITHUB / GIT
+
+*] GIT
+file system 관리, 기록 
+
+install
+https://git-scm.com/
+
+download for Window 
+Standalone Installer
+GIT helps to keep the tracks of the 작업 on files 
+
+]first method to use GIT ---GUI
+
+]second method to use GIT--- CLI
+`]present 
+`]add (staging) = check the result  ---- git add.
+`]commit = save the tracks --- git commit -m "header modify"
+`]push = upload at hithub ---- git push origin master
+
+visual studio
+terminal
+1] git init .
+
+
+
+
+*] GITHUB
+git file upload, save, share
+(IT SNS)
+open an account on GITHUB
+
+profile : cyrielle26
+
+create repository (저정소)
+
+
+ 
+

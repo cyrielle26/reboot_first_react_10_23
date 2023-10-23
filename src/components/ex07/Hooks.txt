@@ -1,0 +1,127 @@
+user - npm - face - Hooks
+
+Hooks is a REACT features 
+(indexd.ts/ Hooks) 
+
+Hooks brings state and side-effects 
+into functional components,
+enabling developers to use component features
+without having to write class components.
+
+*useState
+=> one of react Hooks 변수를 정의하고 값을 변경할때 사용
+=>배열 비구조화 할당을 이용하며 첫번째 값을 변수
+두번째값을 변수를 변경할 수 있는 함수로 정의
+단, set이라는 이름을 붙여줘야됨
+
+code]
+
+import { useState } from "react";
+
+export const EventName = () => {
+
+const [constName, setconstName] = useState(0);
+                                  useState("hello");
+
+                 setconstName -- make the const value change
+
+                             ]//0--- let num  = 0;
+                             ]'hello'----let num = "hello";
+
+ };
+
+ const plusHandler = () => {
+    setconstName(constName + 1);
+ } 
+
+return (
+ <div>
+ 
+    <h3>{num}</h3>
+    <button onClick={plusHandler}>+</button>
+
+ </div>
+
+);
+
+]other code for simple event 
+
+
+import { useState } from "react";
+
+export const EventName = () => {
+
+    const [constName, setconstName] = useState(0);
+                                  
+    return (
+        <div>
+ 
+        <h3>{constName}</h3>
+        <button onClick={() => setconstName(constName+1)}>+</button>
+        </div>
+
+);
+ };
+
+ex]
+Here are some common hooks in React:
+
+useState: Allows you to 
+a] add state management to your functional components. 
+It takes an initial state value and returns an array
+with the current state and a function to update that state.
+
+ex] jsx
+const [count, setCount] = useState(0);
+
+useEffect: Enables you to perform side effects 
+in your components, such as data fetching,
+DOM manipulation, and subscribing to external data sources.
+
+ex] jsx
+useEffect(() => {
+  // Your side effect code here
+}, [dependencyArray]);
+
+useContext: Provides access to the context of a parent component,
+allowing you to access and update shared data 
+without passing props through the component tree.
+
+ex] jsx
+const contextValue = useContext(MyContext);
+
+useReducer: A more advanced alternative to useState 
+for managing more complex state logic.
+It's often used when you have state transitions 
+that depend on the previous state.
+
+ex] jsx
+const [state, dispatch] = useReducer(reducer, initialData);
+
+useRef: Allows you to create mutable references to DOM elements
+and other values that persist between renders.
+
+ex] jsx
+const myRef = useRef(initialValue);
+
+Custom Hooks: You can create your own custom hooks to reuse 
+stateful logic across different components.
+Custom hooks are prefixed with "use" and can encapsulate
+complex behavior.
+
+ex] jsx
+function useCustomHook() {
+  // Your custom hook logic here
+}
+
+const customData = useCustomHook();
+
+
+Hooks are essential for making functional components
+more powerful and flexible. 
+They simplify the management of component logic 
+and make it easier to share and reuse code. 
+With hooks, functional components can handle complex state,
+ side effects, 
+ and other features previously reserved for class components, 
+ making it the preferred choice for many React developers.

@@ -1,0 +1,17 @@
+Install react
+1] download the right version of Node.js (https://nodejs.org/fr
+select the LTS version (Long Time Support version)
+
+2] open the cmd console to check the installation on your computer
+window + r
+cmd + Enter
+C:\Users\Cyrielle>node -v
+C:\Users\Cyrielle>npm --version
+C:\Users\Cyrielle> cd Desktop
+C:\Users\Cyrielle\Desktop>npx create-react-app first_react
+
+3] open on visual code
+drag the folder
+cltr j type npm run start
+if there is a bug :
+type :

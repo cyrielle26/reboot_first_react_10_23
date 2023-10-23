@@ -1,0 +1,70 @@
+for CSS propriety that you want to apply to the all website
+---use of function
+
+1] go to the website:
+https://www.npmjs.com/
+type in the search bar:
+styled-reset
+click on : ---
+Eric Meyer's (https://meyerweb.com/eric/tools/dencoder/)
+copy -- this :
+npm i styled-reset
+
+2] go to terminal ---past the npm i styled-reset / Enter
+
+3] check if it's installed ---
+packagejson / "styled-components": "^6.1.0",
+
+
+4] create GlobalStyled
+src / file / GlobalStyled
+
+5] on the GlobalStyled file :
+
+[
+import { createGlobalStyle } from "styled-components";
+import reset from "styled-reset";
+
+//here create some other const used on the all website
+ex:
+
+export const baseLayoutSize = {
+  /* paddingLeft: "15%",
+  paddingRight: "15%", */
+  padding: "150px 15%",
+};
+
+export const GlobalStyled = createGlobalStyle`
+${reset}
+body{
+   ex:
+    font-family: 'Noto Sans KR', sans-serif;
+}
+`;
+]
+
+5] link the GlobalStyled component to others
+src/ index.js / import GlobalStyled method: ---
+
+[
+    (...)
+import { GlobalStyled } from "./GlobalStyled";
+
+const root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(
+  <React.StrictMode>
+    <GlobalStyled />
+    (...)
+  </React.StrictMode>
+);
+]
+
+6] link the other const on GlobalStyled to other components
+ex: 
+Section_1.js / 
+
+import styled from "styled-components";
+
+import { fontSize, baseLayoutSize } from "../../../GlobalStyled";
+
+

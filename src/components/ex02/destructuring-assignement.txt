@@ -1,0 +1,143 @@
+destructuring assignement
+
+I] definition
+
+JavaScript feature that allows you to extract values 
+from arrays or objects and assign them to variables 
+in a more concise and readable way. 
+
+]*******************************************************
+
+II] Destructuring from Objects:
+
+]jsx code ex:
+
+]define the const - objects
+const person = {
+  firstName: "John",  ]// object1 = firstName
+  lastName: "Doe",    ]// object2 = lastName
+};
+
+function MyComponent() {
+
+  ]define the destructuring assignement to
+  extract object1-2's values ===
+
+  const { firstName, lastName } = person;
+
+  ]assigne the output features
+  return (
+    <div>
+      <p>{firstName}</p>
+      <p>{lastName}</p>
+    </div>
+  );
+
+}
+] ********************************************
+
+III] Destructuring from Arrays:
+
+]jsx code ex:
+
+]define the const - array
+const numbers = [1, 2, 3, 4, 5];
+
+
+
+function MyComponent() {
+
+]define the destructuring assignement to
+  extract and reassigne values ex: 1 value = first 
+  
+  const [first, second, ...rest] = numbers;
+
+  ]//** ...rest  captures the rest of the elements in a new array.
+    console.log(first);  // 1
+    console.log(second); // 2
+    console.log(rest);   // [3, 4, 5]
+
+ ]assigne the output features
+  return (
+    <div>
+      <p>First: {first}</p>
+      <p>Second: {second}</p>
+      <p>Rest: {rest.join(', ')}</p>
+    </div>
+  );
+}
+]//**join(', ') converts the array elements into a single string
+ where the elements are separated by the specified delimiter. 
+ In this case, ', ' is the delimiter, which means
+  that the array elements will be joined together with
+  a comma ,  followed by a space between each element.
+
+  console.log(rest.join(', ')); // "3, 4, 5"
+
+
+With Explicit Return Statement:
+javascript
+Copy code
+const fn1 = (a, b) => {
+  return a + b;
+};
+This is an arrow function with an explicit return statement enclosed in curly braces. It takes two parameters a and b and returns the result of a + b. This form is used when you want to have multiple statements inside the function or if you need to specify complex logic.
+
+With Implicit Return:
+javascript
+Copy code
+const fn2 = (a, b) => a + b;
+This is a more concise form of an arrow function, often used when you have a single expression to return. The curly braces and return keyword are omitted, and the result is implicitly returned. This form is used for simple functions that perform a single operation.
+
+1]  arrow function 
+
+  const fn = () => {
+    const fn = function(){}
+    }
+
+2] arrow function 
+
+  const fn = (a,b) => {
+    return a + b;
+  }
+
+
+3] const array 
+
+a) original assignement
+const arr = [
+    {
+        a:1,
+        b:2
+    }
+];
+
+b)destructuring assignement
+
+const [{a,b}] = arr; 
+
+
+4] props
+
+a) original
+const {object1, object2 } = props;
+
+
+const props = { age: {age}, name:{name}};
+
+
+
+//
+
+const obj = {
+    a:{
+        one:1,
+        two:2,
+    }
+}
+
+const obj {a:{one,two}} = obj;
+
+
+fragment tag (instead of div to embrace as a parent tag inside the const to respect jsx)
+

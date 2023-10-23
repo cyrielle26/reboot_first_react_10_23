@@ -1,0 +1,73 @@
+link CSS language to JS / JSX
+
+1. writing css value in the first tag :
+=> <div style="height:300px; width:300px; background-color:red"></div>
+
+2. writing within <style></style>
+
+3.link a CSS file
+
+
+ the limitations of CSS
+
+if you want to change an element in all the website (main.sub pages)
+you have to do it one by one there's no variable to create automatic response
+
+you need to add some pluggin to be able to create some order
+to CSS
+
+https://styled-components.com/
+
+documentation/ installation
+
+ctrl j /
+
+# with npm
+npm install styled-components
+
+1)
+ctrl c // cut the server
+^C^CTerminate batch job (Y/N)?  y or n
+
+2) copy --- npm install styled-components
+
+3) verifier installation
+package.json file / dependencies / 
+==== "styled-components": "^6.1.0",
+verifier la version 
+
+(# with yarn
+yarn add styled-components)
+
+https://yarnpkg.com/
+
+
+extension 
+vscode-styled-components
+
+
+GUI 
+TUI Text User Interface
+CLI command li key
+
+
+**********************************\\
+
+import styled from "styled-components";
+
+const Box = styled.div`
+  width: 300px;
+  height: 300px;
+  background-color: ${(props) => props.$bgColor};
+  //()if it's only one you can take them of if several 필수
+  border: 10px solid black;
+`;
+
+export const StyledEx = () => {
+  return (
+    <div>
+      <Box $bgColor="teal"></Box>
+      <Box $bgColor="salmon"></Box>
+    </div>
+  );
+};
