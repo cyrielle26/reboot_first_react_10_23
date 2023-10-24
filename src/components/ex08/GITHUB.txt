@@ -14,16 +14,36 @@ GIT helps to keep the tracks of the 작업 on files
 
 ]second method to use GIT--- CLI
 `]present 
-`]add (staging) = check the result  ---- git add.
+`]add (staging) = check the result  ---- git add .
 `]commit = save the tracks --- git commit -m "header modify"
 `]push = upload at hithub ---- git push origin master
 
 visual studio
-terminal
+
+click on the GIT icon and click on initialize 
+terminal / cmd 
 1] git init .
+2] git add .
+3] git commit -m "first git" 
+4] git config --global user.name "cyrielle26" 
+   git config --global user.email "cyrielleperminjat@gmail.com"
+
+a window will popup 
+connect to GITHUB with you subscribers info
+and click on Authorized visual code 
 
 
 
+after create repository in GITHUB copy the webpage link
+
+5] git remote add origin https://github.com/cyrielle26/reboot_first_react_10_23
+
+
+6] git push origin main
+{or master instead of main 
+ (check the bottom left part of the screen next to git icon)
+
+==> the project will appears on your github page
 
 *] GITHUB
 git file upload, save, share

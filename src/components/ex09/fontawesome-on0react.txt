@@ -1,0 +1,40 @@
+https://fontawesome.com/ /start / react
+
+1. Add SVG Core
+npm i --save @fortawesome/fontawesome-svg-core
+
+//check on Package.json if the style is installed
+
+ 2. Add Icon Packages
+ # Free icons styles
+npm i --save @fortawesome/free-solid-svg-icons
+npm i --save @fortawesome/free-regular-svg-icons
+npm i --save @fortawesome/free-brands-svg-icons
+
+//check on Package.json if the style is installed
+
+3. Add the React Component
+
+npm i --save @fortawesome/react-fontawesome@latest
+
+//check on Package.json if the style is installed
+
+4. import fontawesome component to component file
+
+import { faUser } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
+export const IconEx = () => {
+  return (
+    <div>
+      <FontAwesomeIcon icon={faUser} style={{ color: "salmon" }} />
+    </div>
+  );
+};
+
+looks for the code on the website to research = ex faUser / solid regular ...
+
+import the icon 
+import { faUser } from "@fortawesome/free-solid-svg-icons";
+<FontAwesomeIcon icon={faUser} style={{ color: "salmon" }} />
+

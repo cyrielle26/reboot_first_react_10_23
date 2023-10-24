@@ -8,7 +8,7 @@
 //import { Ex05 } from "./components/ex05/Ex05";
 //import { Ex06 } from "./components/ex06/Ex06";
 //import { Ex07 } from "./components/ex07/Ex07";
-import { Ex08 } from "./components/ex08/Ex08";
+import { Ex09 } from "./components/ex09/Ex09";
 
 const App = () => {
   return (
@@ -38,8 +38,8 @@ const App = () => {
       {/* 7일차 Hook + Event*/}
       {/* <Ex07 /> */}
 
-      {/* 8일차 */}
-      <Ex08 />
+      {/* 9일차 */}
+      <Ex09 />
     </div>
   );
 };

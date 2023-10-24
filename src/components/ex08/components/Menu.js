@@ -2,22 +2,22 @@ import styled from "styled-components";
 import { fontSize, baseLayoutSize } from "../../../GlobalStyled";
 import { useState } from "react";
 
-const SHeader = styled.header`
-  padding: 20px 15%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+const HiddenMenu = HiddenMenu.styled`
 `;
 
-export const Header = () => {
+export const Menu = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
   };
+
   return (
-    <SHeader>
-      <button onClick={toggleMenu}>=</button>
-    </SHeader>
+    <HiddenMenu className={menuOpen ? "visible" : ""}>
+      <a href="#">Home</a>
+      <a href="#">About</a>
+      <a href="#">Services</a>
+      <a href="#">Contact</a>
+    </HiddenMenu>
   );
 };
