@@ -19,3 +19,6 @@ body{
     font-family: 'Noto Sans Korean', sans-serif;
 }
 `;
+export const colors = {
+  darkGray: "#1d1d1d",
+};

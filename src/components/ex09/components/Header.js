@@ -3,34 +3,28 @@ import { faBars } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import styled from "styled-components";
 
-const Wrap = styled.body`
-  width: 100%;
-  height: 100vh;
-  background-color: black;
-`;
-
 const SHeader = styled.header`
-  padding: 20px 15%;
+  padding: 20px 8% 30px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 `;
-const LeftBtn = styled.h3`
-  width: 50px;
-  height: 50px;
+const LeftBtn = styled.div`
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
   background-color: #ffff;
   text-align: center;
-  line-height: 50px;
+  line-height: 40px;
   cursor: pointer;
 `;
-const RightBtn = styled.h3`
-  width: 50px;
-  height: 50px;
+const RightBtn = styled.div`
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
   border: solid 1px #fff;
   text-align: center;
-  line-height: 50px;
+  line-height: 40px;
   cursor: pointer;
 `;
 export const Header = () => {

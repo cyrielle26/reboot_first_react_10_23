@@ -8,7 +8,8 @@
 //import { Ex05 } from "./components/ex05/Ex05";
 //import { Ex06 } from "./components/ex06/Ex06";
 //import { Ex07 } from "./components/ex07/Ex07";
-import { Ex09 } from "./components/ex09/Ex09";
+//import { Ex09 } from "./components/ex09/Ex09";
+import { Ex010 } from "./components/ex010/Ex010";
 
 const App = () => {
   return (
@@ -38,8 +39,11 @@ const App = () => {
       {/* 7일차 Hook + Event*/}
       {/* <Ex07 /> */}
 
-      {/* 9일차 */}
-      <Ex09 />
+      {/* 9일차 FrontAwesome + Music App*/}
+      {/* <Ex09 /> */}
+
+      {/* 10일차 Music App correction */}
+      <Ex010 />
     </div>
   );
 };
