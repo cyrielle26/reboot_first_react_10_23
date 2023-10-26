@@ -1,14 +1,12 @@
 import styled from "styled-components";
-import { GlobalStyled } from "../../../GlobalStyled";
-import { colors } from "../../../GlobalStyled";
 
 const SCover = styled.div`
-  margin: 50px auto;
+  max-width: 300px;
   width: 100%;
+  margin: 50px auto;
 `;
 const Bg = styled.div`
-  max-width: 320px;
-  width: 100px;
+  height: 320px;
   background-color: lightgray;
   border-radius: 20px;
 `;
@@ -18,7 +16,7 @@ const TitleWrap = styled.div`
   margin-top: 30px;
   h3 {
     font-size: 22px;
-    font-weight: 700;
+    font-weight: 600;
   }
   p {
     font-size: 14px;

@@ -1,7 +1,7 @@
 import styled from "styled-components";
-import { GlobalStyled } from "../../../GlobalStyled";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faForwardStep } from "@fortawesome/free-solid-svg-icons";
+import { colors } from "../../../GlobalStyled";
 
 const SUserCon = styled.div`
   padding: 20px;
@@ -14,6 +14,7 @@ const SUserCon = styled.div`
 `;
 const User = styled.div`
   display: flex;
+  align-items: center;
 `;
 const Avatar = styled.div`
   width: 40px;
