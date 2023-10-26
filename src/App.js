@@ -9,7 +9,8 @@
 //import { Ex06 } from "./components/ex06/Ex06";
 //import { Ex07 } from "./components/ex07/Ex07";
 //import { Ex09 } from "./components/ex09/Ex09";
-import { Ex010 } from "./components/ex010/Ex010";
+//import { Ex010 } from "./components/ex010/Ex010";
+import { Ex011 } from "./components/ex011/Ex011";
 
 const App = () => {
   return (
@@ -24,26 +25,23 @@ const App = () => {
       */}
       {/*3일차  Props */}
       {/*  <PropsEx /> */}
-
       {/* 4일차  Maps*/}
       {/* <MapFnEx /> */}
       {/* <IntroEx04 /> */}
       {/* <ProblemEx04 /> */}
-
       {/* 5일차 CSS*/}
       {/* <Ex05 /> */}
-
       {/* 6일차 GlobalStyled + webfont */}
       {/* <Ex06 /> */}
-
       {/* 7일차 Hook + Event*/}
       {/* <Ex07 /> */}
-
       {/* 9일차 FrontAwesome + Music App*/}
       {/* <Ex09 /> */}
-
       {/* 10일차 Music App correction */}
-      <Ex010 />
+      {/* <Ex010 /> */}
+
+      {/* 11일차 */}
+      <Ex011 />
     </div>
   );
 };

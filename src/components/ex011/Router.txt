@@ -1,0 +1,183 @@
+Router
+
+=>라우터
+
+permet de passer d'une page a l'autre
+
+1]Router installation
+
+https://reactrouter.com/en/main
+
+
+Terminal
+
+npm i react-router-dom
+
+verifier du fichier l'installation sur json
+
+2]importer dans la component principale 
+Ex)
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { Home } from "./pages/Home";
+import { Sub01 } from "./pages/Sub01";
+import { Sub02 } from "./pages/Sub02";
+import { NotFound } from "./pages/NotFound";
+
+export const Ex011 = () => {
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/sub01" element={<Sub01 />} />
+        <Route path="/sub02" element={<Sub02 />} />
+        <Route path="/*" element={<NotFound />} /> 
+        [|_message d'erreur quand l'utilisateur s'est trompe
+           dans le lien 
+      </Routes>
+    </BrowserRouter>
+  );
+};
+
+OR HashRouter
+
+3]To make sure that you can go back and forth 
+among all the pages using different path 
+you need to make a menu that works as a visual router 
+ex)
+
+import { Link } from "react-router-dom";
+
+
+export const Home = () => {
+  return (
+    <div>
+      <header>
+        <div>
+          <Link to={"/"}>LOGO</Link>
+        </div>
+      </header>
+      <ul>
+        <li>
+          <Link to={"/sub01"}>SUB1</Link>
+        </li>
+        <li>
+          <Link to={"/sub02"}>SUB2</Link>
+        </li>
+      </ul>
+
+      <hr />
+
+      <h3>HOME</h3>
+    </div>
+  );
+};
+
+//]you can't use a tag you have to use Link component
+<Link to={"/sub02"}>SUB2</Link>
+
+4] if you want to use this visual router on all the pages
+
+a)create Header.js
+----- pages menu (sommaire)
+
+b)link the Header/component to the main file
+
+    <BrowserRouter>
+
+|___link here 
+
+      <Header />
+
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/sub01" element={<Sub01 />} />
+        <Route path="/sub02" element={<Sub02 />} />
+        <Route path="/*" element={<NotFound />} />
+      </Routes>
+
+      |___link here 
+
+      <Footer />
+    </BrowserRouter>
+
+
+    5] comment faire changer le titre d'une page web
+     dans la zone favicon
+     a chaque subpage
+
+     for search references you need to register 등록 titles
+     by ---
+     ====robot,program // seo   alt " "
+
+     https://www.npmjs.com/
+
+     1]install react helmet
+     terminal
+     npm i react-helmet
+
+     json file
+      "react-helmet": "^6.1.0",
+
+    2] create a PageTitle component to create a props
+
+    import { Helmet } from "react-helmet";
+
+export const PageTitle = ({ name }) => {
+  return (
+    <div>
+      <Helmet>
+        <title>{name}</title>
+      </Helmet>
+    </div>
+  );
+};
+
+3] link the component and change the title to each page
+ex)
+
+ <PageTitle name={"Home"}></PageTitle>
+ 
+
+
+   
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+]]404 Not found
+
+http status ===  https://fr.wikipedia.org/wiki/Liste_des_codes_HTTP
+
+200 : succès de la requête ;
+301 et 302 : redirection, respectivement permanente et temporaire ;
+401 : utilisateur non authentifié ;
+403 : accès refusé ;
+404 : ressource non trouvée ;
+500, 502 et 503 : erreurs serveur ;
+504 : le serveur n'a pas répondu.
+
+comment  chercher le http status
+
+inspect window / Network / 
+
+
+
+
+
+
+
