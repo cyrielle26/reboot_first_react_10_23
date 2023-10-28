@@ -10,7 +10,9 @@
 //import { Ex07 } from "./components/ex07/Ex07";
 //import { Ex09 } from "./components/ex09/Ex09";
 //import { Ex010 } from "./components/ex010/Ex010";
-import { Ex011 } from "./components/ex011/Ex011";
+//import { Ex011 } from "./components/ex011/Ex011";
+//import { Ex012 } from "./components/ex012/Ex012";
+import { Ex012Correction } from "./components/ex012Correction/Ex012Correction";
 
 const App = () => {
   return (
@@ -40,8 +42,12 @@ const App = () => {
       {/* 10일차 Music App correction */}
       {/* <Ex010 /> */}
 
-      {/* 11일차 */}
-      <Ex011 />
+      {/* 11일차 Router*/}
+      {/* <Ex011 /> */}
+
+      {/* 12일차 */}
+      {/* <Ex012 /> */}
+      <Ex012Correction />
     </div>
   );
 };
