@@ -1,8 +1,7 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Header } from "./components/Header";
 import { Home } from "./pages/Home";
-import { Sub01 } from "./pages/Sub01";
-import { Sub02 } from "./pages/Sub02";
+import { Sub } from "./pages/Sub";
 import { PageNotFound } from "./pages/PageNotFound";
 
 export const Ex012Correction = () => {
@@ -11,8 +10,8 @@ export const Ex012Correction = () => {
       <Header></Header>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/sub01" element={<Sub01 />} />
-        <Route path="/sub02" element={<Sub02 />} />
+        <Route path="/sub/:id" element={<Sub />} />
+        {/*  :변수명 */}
         <Route path="/*" element={<PageNotFound />} />
       </Routes>
     </BrowserRouter>

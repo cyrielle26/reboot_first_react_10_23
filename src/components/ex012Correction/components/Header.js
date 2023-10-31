@@ -4,7 +4,7 @@ import styled from "styled-components";
 const Sheader = styled.header`
   padding: 20px 20%;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   border-bottom: 1px solid #dbdbdb;
 `;
@@ -31,14 +31,11 @@ export const Header = () => {
       </Logo>
       <Nav>
         <li>
-          <Link to={"/sub01"}>Menu 1</Link>
+          <Link to={"/sub/0"}>Menu 1</Link>
         </li>
         <li>
-          <Link to={"/sub02"}> Menu2</Link>
+          <Link to={"/sub/1"}> Menu2</Link>
         </li>
-        {/*  <li>
-          <Link to={"/sub01"}></Link>
-        </li> */}
       </Nav>
     </Sheader>
   );

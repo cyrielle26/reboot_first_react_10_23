@@ -1,0 +1,47 @@
+Form function
+=> library 
+
+(web2 radio) check
+
+1]
+https://react-hook-form.com/
+Get Started
+npm install react-hook-form
+
+2]terminal 
+npm install react-hook-form
+
+check if the file is installed on json
+
+3]
+
+
+export const Login = () => {
+  const { register, handleSubmit } = useForm();
+  return (
+    <Wrap>
+      <Form on onSubmit={handleSubmit(loginHandler)}>
+                |__ event
+        <Title>LOGIN</Title>
+        <Input  {...} type="text" placeholder="ID"></Input>
+        <Input  {...} type="text" placeholder="PW"></Input>
+
+    \___ {...} spread 연산자 (mdn)
+    <constname {...register("",{
+        required:   ,
+    })}
+    />
+
+        <Button>Login</Button>
+      </Form>
+    </Wrap>
+  );
+};
+
+
+]optional chaining
+https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Operators/Optional_chaining
+
+
+
+
