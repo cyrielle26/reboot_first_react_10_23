@@ -13,24 +13,71 @@ npm install react-hook-form
 
 check if the file is installed on json
 
-3]
+3] code
+import styled from "styled-components";
+import { useForm } from "react-hook-form";
+import { ErrorMessage } from "../components/ErrorMessage";
+
+]CSS
 
 
 export const Login = () => {
-  const { register, handleSubmit } = useForm();
+
+  1] useForm hook is used to manage form state and validation.
+   It destructures register, handleSubmit, and errors from the hook's
+   return value.
+  
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm();
+
+  2] 
+  const function that can access the user's input data,
+  which is an object containing the values 
+  entered into the form fields.
+
+  const loginHandler = (data) => {
+
+  };
+
+  4] Within the return statement
+
   return (
     <Wrap>
-      <Form on onSubmit={handleSubmit(loginHandler)}>
-                |__ event
-        <Title>LOGIN</Title>
-        <Input  {...} type="text" placeholder="ID"></Input>
-        <Input  {...} type="text" placeholder="PW"></Input>
 
-    \___ {...} spread 연산자 (mdn)
-    <constname {...register("",{
-        required:   ,
-    })}
-    />
+    *] 
+      <Form onSubmit={handleSubmit(loginHandler)}>
+            |__event-  |__eventname    |__function that get
+            activator                  the data of the user
+
+        <Title>LOGIN</Title>
+
+    *] Input tag with
+    the register function / part of the react-hook-form library
+    Error messages are displayed when validation fails.
+
+        <Input
+          {...register("username", {
+            required: "아이디 필수",
+          })}
+          type="text"
+          placeholder="ID"
+        />
+
+    *] error message
+        {/* <span>{errors?.username?.message}</span> */}
+        <ErrorMessage message={errors?.username?.message} />
+
+        <Input
+          {...register("password", {
+            required: "비밀번호 필수",
+          })}
+          type="password"
+          placeholder="PW"
+        />
+        <ErrorMessage message={errors?.password?.message} />
 
         <Button>Login</Button>
       </Form>
@@ -38,9 +85,30 @@ export const Login = () => {
   );
 };
 
+]sum up
 
-]optional chaining
-https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Operators/Optional_chaining
+*useForm
+=> Form package
+ex)
+
+const{
+  register, // input tag name and register 
+  handleSubmit, // form tag event register
+  formState{errors, isValid}}// form state planner
+                |__ errors : form 유효성 검사 후 error를 객체로 반환함,
+                     |_isValid: form state 유효한지 Boolean값으로 반홤
+ = useForm({
+  mode: "onChange" // form mode 유효성검사를 어떻게 처리할지 값은 작성할 수 있음
+ }); 
+
+ <input {...register("name",{
+  required: ""//현 input 값이 필수값인지 아닌지 Boolean값으로 및 문자열호 작성 가능
+
+ })}
+
+ ]]**
+ https://react-hook-form.com/docs / API /  useForm
+
 
 
 

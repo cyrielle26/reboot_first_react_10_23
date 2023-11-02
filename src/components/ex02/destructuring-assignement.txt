@@ -1,4 +1,4 @@
-destructuring assignement
+]]]]]]]]]]destructuring assignement
 
 I] definition
 
@@ -13,19 +13,23 @@ II] Destructuring from Objects:
 ]jsx code ex:
 
 ]define the const - objects
+
 const person = {
   firstName: "John",  ]// object1 = firstName
   lastName: "Doe",    ]// object2 = lastName
 };
 
+]create a function to assign
+
 function MyComponent() {
 
-  ]define the destructuring assignement to
-  extract object1-2's values ===
+  ] extract object1 and object2's values ("John" "Doe")
+   using a destructuring assignement ===
 
   const { firstName, lastName } = person;
 
   ]assigne the output features
+
   return (
     <div>
       <p>{firstName}</p>
@@ -34,6 +38,27 @@ function MyComponent() {
   );
 
 }
+
+]sum up 
+
+const person = {
+  firstName: "John", 
+  lastName: "Doe",    
+};
+|__ const{firstName,lastName}=person;
+
+
+]other example:
+
+const obj = {
+    a:{
+        one:1,
+        two:2,
+    }
+}
+|__ const obj {a:{one,two}} = obj;
+
+
 ] ********************************************
 
 III] Destructuring from Arrays:
@@ -41,18 +66,22 @@ III] Destructuring from Arrays:
 ]jsx code ex:
 
 ]define the const - array
+
 const numbers = [1, 2, 3, 4, 5];
 
 
+]create a function to apply to the interface 
 
 function MyComponent() {
 
-]define the destructuring assignement to
-  extract and reassigne values ex: 1 value = first 
+] extract and reassigne values ex: 1 value = first 
+  using a destructuring assignement
+ 
   
   const [first, second, ...rest] = numbers;
 
   ]//** ...rest  captures the rest of the elements in a new array.
+
     console.log(first);  // 1
     console.log(second); // 2
     console.log(rest);   // [3, 4, 5]
@@ -74,69 +103,96 @@ function MyComponent() {
 
   console.log(rest.join(', ')); // "3, 4, 5"
 
+  ]other example 
 
-With Explicit Return Statement:
-javascript
-Copy code
-const fn1 = (a, b) => {
-  return a + b;
-};
-This is an arrow function with an explicit return statement enclosed in curly braces. It takes two parameters a and b and returns the result of a + b. This form is used when you want to have multiple statements inside the function or if you need to specify complex logic.
-
-With Implicit Return:
-javascript
-Copy code
-const fn2 = (a, b) => a + b;
-This is a more concise form of an arrow function, often used when you have a single expression to return. The curly braces and return keyword are omitted, and the result is implicitly returned. This form is used for simple functions that perform a single operation.
-
-1]  arrow function 
-
-  const fn = () => {
-    const fn = function(){}
-    }
-
-2] arrow function 
-
-  const fn = (a,b) => {
-    return a + b;
-  }
-
-
-3] const array 
-
-a) original assignement
 const arr = [
     {
         a:1,
         b:2
     }
 ];
-
-b)destructuring assignement
-
-const [{a,b}] = arr; 
+|__const [{a,b}] = arr; 
 
 
-4] props
+]****************************************************
 
-a) original
-const {object1, object2 } = props;
+IV] Destructuring from arrow function 
+
+]definition :
+functional components / class component methods
+often used for event handlers or callback functions
+
+]code example
+
+const person = {
+  firstName: "John",
+  lastName: "Doe",
+};
+
+]// Using a regular function
+
+const getFullName = (p) => {
+  const { firstName, lastName } = p;
+  return `${firstName} ${lastName}`;
+};
+
+console.log(getFullName(person)); // Output: "John Doe"
+
+]// Using an arrow function with destructuring
+
+const getFullNameArrow = ({ firstName, lastName }) => `${firstName} ${lastName}`;
+
+console.log(getFullNameArrow(person)); // Output: "John Doe"
+
+]sum up
+
+const getFullName = (p) => {
+  const { firstName, lastName } = p;
+  return `${firstName} ${lastName}`;
+};
+|___ const getFullName = ({ firstName, lastName }) => `${firstName} ${lastName}`;
+
+]************************************************************************
+
+V] destructuring assignement from props
+
+]definition
+
+mechanism for passing data from a parent component
+to a child component.
 
 
-const props = { age: {age}, name:{name}};
+]// original assignement-- functional component
+
+export const MyComponent = (props) => {
+  return (
+    <div>
+      <p>Prop 1: {props.prop1}</p>
+      <p>Prop 2: {props.prop2}</p>
+    </div>
+  );
+};
+
+]//destructuring assignement
+
+export const MyComponent = ({ prop1, prop2 }) => {
+  return (
+    <div>
+      <p>Prop 1: {prop1}</p>
+      <p>Prop 2: {prop2}</p>
+    </div>
+  );
+};
+
+
+
+
 
 
 
 //
 
-const obj = {
-    a:{
-        one:1,
-        two:2,
-    }
-}
 
-const obj {a:{one,two}} = obj;
 
 
 fragment tag (instead of div to embrace as a parent tag inside the const to respect jsx)

@@ -47,6 +47,6 @@ export const ComEx02 = () => {
 
 4] link the component to the App file
 App.js /
-Apps.js  -->  = import{constname, constname} form "./path";
+Apps.js  -->  = import{Constname, Constname} form "./path";
 ex:
 import { ComEx01, ComEx02 } from "./components/ex02/ComEx01";

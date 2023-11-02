@@ -13,7 +13,10 @@
 //import { Ex011 } from "./components/ex011/Ex011";
 //import { Ex012 } from "./components/ex012/Ex012";
 //import { Ex012Correction } from "./components/ex012Correction/Ex012Correction";
-import { Ex014 } from "./components/ex014/Ex014";
+//import { Ex014 } from "./components/ex014/Ex014";
+//import { Ex015 } from "./components/ex015/Ex015";
+import { Ex016 } from "./components/ex016/Ex016";
+
 const App = () => {
   return (
     <div>
@@ -50,7 +53,11 @@ const App = () => {
       {/* <Ex012Correction /> */}
 
       {/* 14일차 */}
-      <Ex014 />
+      {/* <Ex014 /> */}
+
+      {/*  15일차 / 16일차 */}
+      {/* <Ex015 /> */}
+      <Ex016 />
     </div>
   );
 };
