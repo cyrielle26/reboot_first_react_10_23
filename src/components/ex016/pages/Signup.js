@@ -1,5 +1,5 @@
 import { useForm, useFormState } from "react-hook-form";
-import styled from "styled-components";
+import { Login } from "../pages/Login";
 import { ErrorMessage } from "../components/ErrorMessage";
 import {
   Wrap,
@@ -71,7 +71,7 @@ export const Signup = () => {
 
         <BottomInfo>
           Do you have an account?
-          <Link to="SignUp"> Login &rarr;</Link>
+          <Link to="/login">Login &rarr;</Link>
         </BottomInfo>
       </Form>
     </Wrap>

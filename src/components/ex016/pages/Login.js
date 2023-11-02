@@ -10,6 +10,7 @@ import {
 } from "../components/loginStyles";
 import { Link } from "react-router-dom";
 import { ButtonUi } from "../components/ButtonUi";
+import { Signup } from "../pages/Signup";
 
 export const Login = () => {
   const {
@@ -57,7 +58,7 @@ export const Login = () => {
 
         <BottomInfo>
           You don't have an account?
-          <Link to="SignUp"> Sign Up &rarr;</Link>
+          <Link to="/signup">Sign Up &rarr;</Link>
         </BottomInfo>
       </Form>
     </Wrap>
