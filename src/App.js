@@ -9,13 +9,14 @@
 //import { Ex06 } from "./components/ex06/Ex06";
 //import { Ex07 } from "./components/ex07/Ex07";
 //import { Ex09 } from "./components/ex09/Ex09";
-//import { Ex010 } from "./components/ex010/Ex010";
-//import { Ex011 } from "./components/ex011/Ex011";
-//import { Ex012 } from "./components/ex012/Ex012";
+//import { Ex010 } from "./components/ex10/Ex010";
+//import { Ex011 } from "./components/ex11/Ex011";
+//import { Ex012 } from "./components/ex12/Ex012";
 //import { Ex012Correction } from "./components/ex012Correction/Ex012Correction";
-//import { Ex014 } from "./components/ex014/Ex014";
-//import { Ex015 } from "./components/ex015/Ex015";
-import { Ex016 } from "./components/ex016/Ex016";
+//import { Ex014 } from "./components/ex14/Ex014";
+//import { Ex015 } from "./components/ex15/Ex015";
+import { Ex016 } from "./components/ex16/Ex016";
+//import { Ex17 } from "./components/ex17/Ex17";
 
 const App = () => {
   return (
@@ -44,20 +45,19 @@ const App = () => {
       {/* <Ex09 /> */}
       {/* 10일차 Music App correction */}
       {/* <Ex010 /> */}
-
       {/* 11일차 Router*/}
       {/* <Ex011 /> */}
-
-      {/* 12/ 13일차 */}
+      {/* 12/ 13일차  Sub Pages*/}
       {/* <Ex012 /> */}
       {/* <Ex012Correction /> */}
-
-      {/* 14일차 */}
+      {/* 14일차 Form Hook React / optional chaining / Login*/}
       {/* <Ex014 /> */}
-
-      {/*  15일차 / 16일차 */}
+      {/*  15일차 / 16일차 LOGIN UI */}
       {/* <Ex015 /> */}
-      <Ex016 />
+      {/* <Ex016 /> */}
+
+      {/*  17일차 */}
+      <Ex17 />
     </div>
   );
 };

@@ -1,17 +1,6 @@
 import { createGlobalStyle } from "styled-components";
 import reset from "styled-reset";
 
-export const GlobalStyled = createGlobalStyle`
-${reset}
-body{
-    font-family: 'Noto Sans Korean', sans-serif;
-}
-a{
-  text-decoration: none;
-  color: #1d1d1d;
-}
-`;
-
 export const baseLayoutSize = {
   /* paddingLeft: "15%",
   paddingRight: "15%", */
@@ -26,3 +15,15 @@ export const fontSize = {
 export const colors = {
   darkGray: "#1d1d1d",
 };
+
+export const GlobalStyled = createGlobalStyle`
+${reset}
+body{
+    font-family: 'Noto Sans Korean', sans-serif;
+}
+a{
+  text-decoration: none;
+  color: #1d1d1d;
+}
+
+`;

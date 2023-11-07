@@ -1,0 +1,139 @@
+1] create pages 
+
+|__ Home / Login / Signup / PageNotFound
+    a] create component function for each pages
+    b] import the page to the main js(Ex**)
+
+***********************************************
+2] Complete the the main js(Ex**) frame with ROUTER
+
+    a]in return ()
+    <BrowserRouter>
+        <Routes>
+            <Route path="/" element={<Home/>}/>
+            <Route path="/" element={<Login/>}/>
+            <Route path="/" element={<Signup/>}/>
+            <Route path="/" element={<PageNotFound/>}/>
+        </Routes>
+    </BrowserRouter>
+
+b]import router Link at the top
+|_import { BrowserRouter, Routes, Route } from "react-router-dom";
+
+
+************************************************************
+
+3] Create and Link Header component
+
+    a]in return ()
+    <SHeader>
+
+    <Logo></Logo>
+
+    <Nav>
+    <Link to="/Login">Login</Link>
+    <Link to="/Signup">Signup</Link>
+    </Nav>
+    
+    </SHeader>
+b] import styled from "styled-components";
+c] import { Link } from "react-router-dom";
+d] Complete REACT CSS of Header
+
+const SHeader = styled.header ``;
+const Logo = styled.h3 ``;
+const Nav = styled.ul`
+li{
+
+}`;
+e] import Header to the main js(Ex**)
+
+import { Header } from "./components/Header";
+
+     <BrowserRouter>
+=>      <Header/>     
+        <Routes>
+            <Route path="/" element={<Home/>}/>
+            <Route path="/" element={<Login/>}/>
+            <Route path="/" element={<Signup/>}/>
+            <Route path="/" element={<PageNotFound/>}/>
+        </Routes>
+    </BrowserRouter>
+
+************************************************************
+
+    4] Complete the Login page
+
+   a]in return () => basic frame
+   <Wrap> 
+   
+   <Form> 
+
+   <Title></Title>
+
+    <Input type="text" placeholder="ID"/>
+
+    <Input type="password" placeholder="password"/>
+
+    <Button>Login</Button>
+
+    <Separ>
+        <span></span>
+        <b>OR</b>
+        <span></span>
+    </Separ>
+
+    <BottomInfo>
+    Do you have an account?
+    <Link to="/signup">Sign Up &rarr;</Link> **** signup (minuscule)
+    </BottomInfo>
+   
+   </Form>
+   
+   </Wrap>
+
+   b] import { Link } from "react-router-dom";
+
+c] Complete REACT CSS of Login
+=>import styled from "styled-components";
+
+const Wrap = styled.div``;
+
+const Form = styled.form``; **form
+
+const Title = styled.h3``;
+
+const Input = styled.input``; **input
+
+const Button = styled.button``; **button
+
+const Separ = styled.div`
+  span { 
+  }
+  b { 
+  }
+`;
+export const BottomInfo = styled.div``;
+
+d] complete the form functions 
+
+ 1]useForm
+ => import { useForm } from "react-hook-form";
+ in the const Login before return (),
+ |_...
+ const {
+    register,
+    handleSubmit,
+    formState: { errors, isValid },
+  } = useForm();
+  
+************************************************************
+
+
+
+   
+
+
+
+
+

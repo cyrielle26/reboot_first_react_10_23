@@ -55,4 +55,3 @@ export const Separ = styled.div`
   }
 `;
 export const BottomInfo = styled.div``;
-export const Link = styled.div``;
